@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgEThumb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    <linearGradient id="glowE" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB22C" />
+      <stop offset="100%" stop-color="#854836" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgEThumb)" />
+  <rect width="800" height="500" fill="none" stroke="#222" stroke-width="2" />
+
+  <!-- Subtle grid -->
+  <g opacity="0.12" stroke="#FFB22C" stroke-width="0.7">
+    <line x1="0" y1="125" x2="800" y2="125" />
+    <line x1="0" y1="250" x2="800" y2="250" />
+    <line x1="0" y1="375" x2="800" y2="375" />
+    <line x1="200" y1="0" x2="200" y2="500" />
+    <line x1="400" y1="0" x2="400" y2="500" />
+    <line x1="600" y1="0" x2="600" y2="500" />
+  </g>
+
+  <!-- Container -->
+  <g transform="translate(60, 60)">
+    <rect width="680" height="380" rx="14" fill="#111" stroke="#333" stroke-width="1.5" />
+    
+    <!-- Title bar -->
+    <rect width="680" height="42" rx="14" fill="#181818" />
+    <circle cx="24" cy="21" r="5" fill="#ff5f56" />
+    <circle cx="40" cy="21" r="5" fill="#ffbd2e" />
+    <circle cx="68" cy="21" r="5" fill="#27c93f" />
+    <text x="90" y="26" font-family="'JetBrains Mono', monospace" font-size="11" fill="#888">UCI Tetouan Power Demand Forecasting</text>
+    
+    <rect x="510" y="8" width="150" height="26" rx="6" fill="#854836" fill-opacity="0.3" stroke="#854836" stroke-width="0.8" />
+    <text x="585" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#FFB22C" text-anchor="middle">IN DEVELOPMENT</text>
+
+    <!-- Metrics -->
+    <rect x="30" y="66" width="180" height="85" rx="8" fill="#181818" stroke="#252525" />
+    <text x="46" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#777">OBSERVATIONS</text>
+    <text x="46" y="122" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700" fill="#FFB22C">52,417</text>
+
+    <rect x="230" y="66" width="180" height="85" rx="8" fill="#181818" stroke="#252525" />
+    <text x="246" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#777">INTERVALS</text>
+    <text x="246" y="122" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700" fill="#F7F7F7">10-Minute</text>
+
+    <rect x="430" y="66" width="220" height="85" rx="8" fill="#181818" stroke="#252525" />
+    <text x="446" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#777">DISTRIBUTION</text>
+    <text x="446" y="122" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700" fill="#854836">3 Power Zones</text>
+
+    <!-- Visual Curve Preview -->
+    <g transform="translate(30, 175)">
+      <rect width="620" height="175" rx="8" fill="#141414" />
+      <path d="M 20 120 C 100 130 180 80 260 40 C 340 20 420 80 500 50 C 550 40 600 90 600 90" fill="none" stroke="url(#glowE)" stroke-width="3" />
+      <path d="M 20 140 C 100 150 180 110 260 70 C 340 60 420 110 500 80 C 550 70 600 120 600 120" fill="none" stroke="#854836" stroke-width="2" stroke-dasharray="6 4" />
+      
+      <circle cx="260" cy="40" r="4.5" fill="#FFB22C" />
+      <circle cx="500" cy="50" r="4.5" fill="#FFB22C" />
+      <text x="40" y="160" font-family="'JetBrains Mono', monospace" font-size="10" fill="#666">Tetouan City Multi-Zone Time-Series &amp; Environmental Regression</text>
+    </g>
+  </g>
+</svg>
+

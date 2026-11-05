@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgE2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a" />
+      <stop offset="100%" stop-color="#141414" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bgE2)" />
+
+  <!-- Window Header -->
+  <rect width="1200" height="56" fill="#141414" stroke="#222" stroke-width="1" />
+  <circle cx="28" cy="28" r="6" fill="#ff5f56" />
+  <circle cx="48" cy="28" r="6" fill="#ffbd2e" />
+  <circle cx="68" cy="28" r="6" fill="#27c93f" />
+  <text x="100" y="33" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#F7F7F7">feature_correlation_seaborn_heatmap.png</text>
+
+  <!-- Left Sidebar -->
+  <rect x="0" y="56" width="300" height="694" fill="#111" stroke="#222" stroke-width="1" />
+  <g transform="translate(24, 80)">
+    <text x="0" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700" fill="#F7F7F7">Correlation Analysis</text>
+    <text x="0" y="42" font-family="'JetBrains Mono', monospace" font-size="11" fill="#FFB22C">Pearson Correlation Matrix</text>
+
+    <rect y="60" width="252" height="1" fill="#252525" />
+
+    <text x="0" y="85" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#888">ENGINEERED FEATURES</text>
+    <text x="0" y="112" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#A0A0A0">• sin_hour &amp; cos_hour</text>
+    <text x="0" y="134" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#A0A0A0">• day_of_week &amp; is_weekend</text>
+    <text x="0" y="156" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#A0A0A0">• temperature_lag_1h</text>
+    <text x="0" y="178" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#A0A0A0">• rolling_mean_power_6h</text>
+
+    <text x="0" y="220" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#888">KEY FINDINGS</text>
+    <text x="0" y="246" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#bbb">High positive correlation (r=0.68) between ambient temperature and Zone 1 AC demand during summer peak periods.</text>
+  </g>
+
+  <!-- Main View Area -->
+  <g transform="translate(330, 80)">
+    <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="800" fill="#F7F7F7">Environmental Variables Correlation Heatmap</text>
+    <text x="0" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#A0A0A0">Visualizing collinearity between weather drivers, temporal features, and zone power consumptions.</text>
+
+    <!-- Heatmap Grid -->
+    <rect x="0" y="80" width="820" height="550" rx="12" fill="#141414" stroke="#262626" />
+    
+    <!-- Heatmap Canvas -->
+    <g transform="translate(180, 140)">
+      <!-- Cells (5x5 matrix) -->
+      <!-- Row 0: Temp -->
+      <rect x="0" y="0" width="70" height="70" fill="#FFB22C" rx="4" />
+      <text x="35" y="42" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#111" text-anchor="middle">1.00</text>
+
+      <rect x="80" y="0" width="70" height="70" fill="#4a2517" rx="4" />
+      <text x="115" y="42" font-family="'JetBrains Mono', monospace" font-size="13" fill="#fff" text-anchor="middle">-0.52</text>
+
+      <rect x="160" y="0" width="70" height="70" fill="#854836" fill-opacity="0.4" rx="4" />
+      <text x="195" y="42" font-family="'JetBrains Mono', monospace" font-size="13" fill="#fff" text-anchor="middle">0.24</text>
+
+      <rect x="240" y="0" width="70" height="70" fill="#FFB22C" fill-opacity="0.8" rx="4" />
+      <text x="275" y="42" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#111" text-anchor="middle">0.68</text>
+
+      <rect x="320" y="0" width="70" height="70" fill="#FFB22C" fill-opacity="0.7" rx="4" />
+      <text x="355" y="42" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#111" text-anchor="middle">0.61</text>
+
+      <!-- Row 1: Humidity -->
+      <rect x="0" y="80" width="70" height="70" fill="#4a2517" rx="4" />
+      <text x="35" y="122" font-family="'JetBrains Mono', monospace" font-size="13" fill="#fff" text-anchor="middle">-0.52</text>
+
+      <rect x="80" y="80" width="70" height="70" fill="#FFB22C" rx="4" />
+      <text x="115" y="122" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#111" text-anchor="middle">1.00</text>
+
+      <rect x="160" y="80" width="70" height="70" fill="#222" rx="4" />
+      <text x="195" y="122" font-family="'JetBrains Mono', monospace" font-size="13" fill="#aaa" text-anchor="middle">-0.11</text>
+
+      <rect x="240" y="80" width="70" height="70" fill="#5c2d1b" rx="4" />
+      <text x="275" y="122" font-family="'JetBrains Mono', monospace" font-size="13" fill="#fff" text-anchor="middle">-0.48</text>
+
+      <rect x="320" y="80" width="70" height="70" fill="#5c2d1b" rx="4" />
+      <text x="355" y="122" font-family="'JetBrains Mono', monospace" font-size="13" fill="#fff" text-anchor="middle">-0.45</text>
+
+      <!-- Row 2: Wind Speed -->
+      <rect x="0" y="160" width="70" height="70" fill="#854836" fill-opacity="0.4" rx="4" />
+      <text x="35" y="202" font-family="'JetBrains Mono', monospace" font-size="13" fill="#fff" text-anchor="middle">0.24</text>
+
+      <rect x="80" y="160" width="70" height="70" fill="#222" rx="4" />
+      <text x="115" y="202" font-family="'JetBrains Mono', monospace" font-size="13" fill="#aaa" text-anchor="middle">-0.11</text>
+
+      <rect x="160" y="160" width="70" height="70" fill="#FFB22C" rx="4" />
+      <text x="195" y="202" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#111" text-anchor="middle">1.00</text>
+
+      <rect x="240" y="160" width="70" height="70" fill="#854836" fill-opacity="0.3" rx="4" />
+      <text x="275" y="202" font-family="'JetBrains Mono', monospace" font-size="13" fill="#fff" text-anchor="middle">0.19</text>
+
+      <rect x="320" y="160" width="70" height="70" fill="#854836" fill-opacity="0.25" rx="4" />
+      <text x="355" y="202" font-family="'JetBrains Mono', monospace" font-size="13" fill="#fff" text-anchor="middle">0.16</text>
+
+      <!-- Row 3: Zone 1 -->
+      <rect x="0" y="240" width="70" height="70" fill="#FFB22C" fill-opacity="0.8" rx="4" />
+      <text x="35" y="282" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#111" text-anchor="middle">0.68</text>
+
+      <rect x="80" y="240" width="70" height="70" fill="#5c2d1b" rx="4" />
+      <text x="115" y="282" font-family="'JetBrains Mono', monospace" font-size="13" fill="#fff" text-anchor="middle">-0.48</text>
+
+      <rect x="160" y="240" width="70" height="70" fill="#854836" fill-opacity="0.3" rx="4" />
+      <text x="195" y="282" font-family="'JetBrains Mono', monospace" font-size="13" fill="#fff" text-anchor="middle">0.19</text>
+
+      <rect x="240" y="240" width="70" height="70" fill="#FFB22C" rx="4" />
+      <text x="275" y="282" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#111" text-anchor="middle">1.00</text>
+
+      <rect x="320" y="240" width="70" height="70" fill="#FFB22C" fill-opacity="0.85" rx="4" />
+      <text x="355" y="282" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#111" text-anchor="middle">0.83</text>
+
+      <!-- Row 4: Zone 2 -->
+      <rect x="0" y="320" width="70" height="70" fill="#FFB22C" fill-opacity="0.7" rx="4" />
+      <text x="35" y="362" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#111" text-anchor="middle">0.61</text>
+
+      <rect x="80" y="320" width="70" height="70" fill="#5c2d1b" rx="4" />
+      <text x="115" y="362" font-family="'JetBrains Mono', monospace" font-size="13" fill="#fff" text-anchor="middle">-0.45</text>
+
+      <rect x="160" y="320" width="70" height="70" fill="#854836" fill-opacity="0.25" rx="4" />
+      <text x="195" y="362" font-family="'JetBrains Mono', monospace" font-size="13" fill="#fff" text-anchor="middle">0.16</text>
+
+      <rect x="240" y="320" width="70" height="70" fill="#FFB22C" fill-opacity="0.85" rx="4" />
+      <text x="275" y="362" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#111" text-anchor="middle">0.83</text>
+
+      <rect x="320" y="320" width="70" height="70" fill="#FFB22C" rx="4" />
+      <text x="355" y="362" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#111" text-anchor="middle">1.00</text>
+
+      <!-- Axes Labels -->
+      <text x="-15" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888" text-anchor="end">Temp (°C)</text>
+      <text x="-15" y="122" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888" text-anchor="end">Humidity (%)</text>
+      <text x="-15" y="202" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888" text-anchor="end">Wind Speed</text>
+      <text x="-15" y="282" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#FFB22C" text-anchor="end">Zone 1 kW</text>
+      <text x="-15" y="362" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#854836" text-anchor="end">Zone 2 kW</text>
+
+      <text x="35" y="-15" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888" text-anchor="middle">Temp</text>
+      <text x="115" y="-15" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888" text-anchor="middle">Humidity</text>
+      <text x="195" y="-15" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888" text-anchor="middle">Wind</text>
+      <text x="275" y="-15" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#FFB22C" text-anchor="middle">Zone 1</text>
+      <text x="355" y="-15" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#854836" text-anchor="middle">Zone 2</text>
+    </g>
+  </g>
+</svg>
+

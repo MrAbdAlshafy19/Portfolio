@@ -1,0 +1,302 @@
+/* ====================================================================
+   YAHYA ABDALSHAFY PORTFOLIO - ANIMATIONS & MOTION SYSTEM
+   ==================================================================== */
+
+/* --- Page Loader (Disabled / Non-Blocking by Default) --- */
+.page-loader {
+  display: none !important;
+}
+
+/* --- Content Visibility & Scroll-Triggered Reveals --- */
+/* By default, ALL content is 100% visible to guarantee no blank screens */
+.reveal-on-scroll,
+.reveal-left,
+.reveal-right {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* When JavaScript is active, below-the-fold elements gently reveal upon scroll */
+body.animations-ready .section:not(#home) .reveal-on-scroll:not(.revealed) {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+body.animations-ready .section:not(#home) .reveal-left:not(.revealed) {
+  opacity: 0;
+  transform: translateX(-32px);
+}
+
+body.animations-ready .section:not(#home) .reveal-right:not(.revealed) {
+  opacity: 0;
+  transform: translateX(32px);
+}
+
+.reveal-on-scroll.revealed,
+.reveal-left.revealed,
+.reveal-right.revealed {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+
+/* Staggered Children Delay Utility */
+.stagger-container > *:nth-child(1) { transition-delay: 0.04s; }
+.stagger-container > *:nth-child(2) { transition-delay: 0.08s; }
+.stagger-container > *:nth-child(3) { transition-delay: 0.12s; }
+.stagger-container > *:nth-child(4) { transition-delay: 0.16s; }
+.stagger-container > *:nth-child(5) { transition-delay: 0.20s; }
+.stagger-container > *:nth-child(6) { transition-delay: 0.24s; }
+
+/* --- Custom Desktop Cursor & Ambient Glow --- */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+  mix-blend-mode: difference;
+  display: none; /* Enabled dynamically on desktop mousemove */
+}
+
+.custom-cursor.active {
+  display: block;
+}
+
+.custom-cursor.cursor-hover {
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary-accent);
+  opacity: 0.8;
+}
+
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255, 178, 44, 0.08) 0%, rgba(133, 72, 54, 0.03) 40%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  transition: transform 0.12s cubic-bezier(0.2, 0, 0.2, 1);
+  will-change: transform;
+  display: none; /* Enabled dynamically on desktop mousemove */
+}
+
+.cursor-follower.active {
+  display: block;
+}
+
+[data-theme="light"] .cursor-follower {
+  background: radial-gradient(circle, rgba(255, 178, 44, 0.12) 0%, rgba(133, 72, 54, 0.05) 40%, transparent 70%);
+}
+
+/* --- Background Canvas Animation --- */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+[data-theme="light"] #bg-canvas {
+  opacity: 0.3;
+}
+
+/* --- Pulse Indicator for Availability --- */
+.pulse-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+}
+
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #27c93f;
+  border-radius: 50%;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #27c93f;
+  animation: pulseRipple 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+@keyframes pulseRipple {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+/* --- Dynamic Title Typewriter Cursor --- */
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 3px;
+  width: 3px;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  background-color: var(--primary-accent);
+  animation: blinkCursor 0.9s infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 45% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+/* --- Interactive Hover Elevation & Glow for Cards --- */
+.interactive-card {
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 0.3s ease,
+              background-color 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+.interactive-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 24px -4px var(--card-glow);
+  border-color: var(--card-border-hover);
+}
+
+[data-theme="light"] .interactive-card:hover {
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.1), 0 0 20px -4px rgba(255, 178, 44, 0.25);
+}
+
+/* --- Hero Image Halo Glow --- */
+.portrait-halo {
+  position: absolute;
+  inset: -12px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(255, 178, 44, 0.4), rgba(133, 72, 54, 0.4), rgba(255, 178, 44, 0.1));
+  filter: blur(16px);
+  opacity: 0.6;
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+.hero-image-wrapper:hover .portrait-halo {
+  opacity: 0.95;
+  filter: blur(20px);
+}
+
+/* --- Floating Chips in Hero --- */
+@keyframes floatSlow1 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes floatSlow2 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-1.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.floating-chip-1 {
+  animation: floatSlow1 6s ease-in-out infinite;
+}
+
+.floating-chip-2 {
+  animation: floatSlow2 7.5s ease-in-out infinite;
+}
+
+/* --- Progress Bar Fill Animation --- */
+.skill-bar-fill {
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: width;
+}
+
+/* --- Modal & Lightbox Transitions --- */
+.modal-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-window {
+  transform: scale(0.95) translateY(12px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-window {
+  transform: scale(1) translateY(0);
+}
+
+/* --- Toast Notification Animation --- */
+.toast-notification {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+
+.toast-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* --- Accessibility: Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-on-scroll,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .cursor-follower,
+  .custom-cursor,
+  .floating-chip-1,
+  .floating-chip-2 {
+    display: none !important;
+  }
+}

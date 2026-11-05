@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgG3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a" />
+      <stop offset="100%" stop-color="#141414" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bgG3)" />
+  
+  <!-- Header Bar -->
+  <rect width="1200" height="56" fill="#141414" stroke="#222" stroke-width="1" />
+  <circle cx="28" cy="28" r="6" fill="#ff5f56" />
+  <circle cx="48" cy="28" r="6" fill="#ffbd2e" />
+  <circle cx="68" cy="28" r="6" fill="#27c93f" />
+  <rect x="110" y="16" width="460" height="24" rx="12" fill="#1f1f1f" />
+  <text x="130" y="32" font-family="'JetBrains Mono', monospace" font-size="12" fill="#888">https://bankingfrauddetectionmvpdemo.streamlit.app/#customer-segmentation</text>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="56" width="280" height="694" fill="#111" stroke="#222" stroke-width="1" />
+  <text x="24" y="98" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#F7F7F7">Banking AI Platform</text>
+  <text x="24" y="118" font-family="'JetBrains Mono', monospace" font-size="11" fill="#FFB22C">K-Means Customer Clusters</text>
+
+  <rect x="16" y="140" width="248" height="42" rx="8" fill="#181818" />
+  <text x="36" y="166" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#A0A0A0">○ 1. Fraud Detection</text>
+  
+  <rect x="16" y="192" width="248" height="42" rx="8" fill="#181818" />
+  <text x="36" y="218" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#A0A0A0">○ 2. Customer Risk Score</text>
+
+  <rect x="16" y="244" width="248" height="42" rx="8" fill="#1f1a14" stroke="#FFB22C" stroke-width="1" />
+  <text x="36" y="270" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#FFB22C">● 3. K-Means Segmentation</text>
+
+  <rect x="16" y="296" width="248" height="42" rx="8" fill="#181818" />
+  <text x="36" y="322" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#A0A0A0">○ 4. Product Recommender</text>
+
+  <!-- Main Content -->
+  <g transform="translate(310, 80)">
+    <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="800" fill="#F7F7F7">Customer Segmentation &amp; Behavioral Clusters</text>
+    <text x="0" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#A0A0A0">Unsupervised K-Means clustering applied across spending frequency, account balances, and digital engagement.</text>
+
+    <!-- Cluster Scatter Visualization Panel -->
+    <rect x="0" y="80" width="540" height="550" rx="12" fill="#141414" stroke="#262626" />
+    <text x="24" y="114" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#F7F7F7">PCA 2D Cluster Space (K = 4 Clusters)</text>
+
+    <!-- Plot Area -->
+    <g transform="translate(40, 140)">
+      <!-- Axes -->
+      <line x1="30" y1="410" x2="460" y2="410" stroke="#333" stroke-width="1.5" />
+      <line x1="30" y1="410" x2="30" y2="30" stroke="#333" stroke-width="1.5" />
+      <text x="240" y="440" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#777" text-anchor="middle">Annual Transaction Volume</text>
+      <text x="10" y="200" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#777" transform="rotate(-90 10 200)" text-anchor="middle">Average Balance ($)</text>
+
+      <!-- Cluster 1 (Cluster 0: High Value Savers) - Amber #FFB22C -->
+      <circle cx="340" cy="90" r="6" fill="#FFB22C" opacity="0.85" />
+      <circle cx="360" cy="110" r="5" fill="#FFB22C" opacity="0.85" />
+      <circle cx="320" cy="130" r="7" fill="#FFB22C" opacity="0.85" />
+      <circle cx="380" cy="80" r="6" fill="#FFB22C" opacity="0.85" />
+      <circle cx="350" cy="140" r="5.5" fill="#FFB22C" opacity="0.85" />
+      <circle cx="400" cy="120" r="6" fill="#FFB22C" opacity="0.85" />
+      <circle cx="310" cy="100" r="6.5" fill="#FFB22C" opacity="0.85" />
+      <!-- Centroid 1 -->
+      <polygon points="350,110 357,125 343,125" fill="#F7F7F7" stroke="#FFB22C" stroke-width="2" />
+
+      <!-- Cluster 2 (Cluster 1: Frequent Transactors) - Orange/Brown #854836 -->
+      <circle cx="390" cy="290" r="6" fill="#854836" opacity="0.85" />
+      <circle cx="410" cy="320" r="5" fill="#854836" opacity="0.85" />
+      <circle cx="370" cy="340" r="6.5" fill="#854836" opacity="0.85" />
+      <circle cx="430" cy="270" r="5" fill="#854836" opacity="0.85" />
+      <circle cx="350" cy="310" r="7" fill="#854836" opacity="0.85" />
+      <circle cx="420" cy="350" r="6" fill="#854836" opacity="0.85" />
+      <!-- Centroid 2 -->
+      <polygon points="395,310 402,325 388,325" fill="#F7F7F7" stroke="#854836" stroke-width="2" />
+
+      <!-- Cluster 3 (Cluster 2: Moderate Retail) - Cyan/Teal -->
+      <circle cx="190" cy="240" r="6" fill="#20b2aa" opacity="0.85" />
+      <circle cx="220" cy="260" r="5.5" fill="#20b2aa" opacity="0.85" />
+      <circle cx="170" cy="280" r="6" fill="#20b2aa" opacity="0.85" />
+      <circle cx="210" cy="220" r="7" fill="#20b2aa" opacity="0.85" />
+      <circle cx="240" cy="270" r="5" fill="#20b2aa" opacity="0.85" />
+      <!-- Centroid 3 -->
+      <polygon points="205,250 212,265 198,265" fill="#F7F7F7" stroke="#20b2aa" stroke-width="2" />
+
+      <!-- Cluster 4 (Cluster 3: Low Activity / Entry) - Grey/Purple -->
+      <circle cx="90" cy="360" r="5" fill="#9370db" opacity="0.85" />
+      <circle cx="110" cy="380" r="6" fill="#9370db" opacity="0.85" />
+      <circle cx="80" cy="340" r="5.5" fill="#9370db" opacity="0.85" />
+      <circle cx="130" cy="370" r="6" fill="#9370db" opacity="0.85" />
+      <circle cx="70" cy="390" r="5" fill="#9370db" opacity="0.85" />
+      <!-- Centroid 4 -->
+      <polygon points="95,365 102,380 88,380" fill="#F7F7F7" stroke="#9370db" stroke-width="2" />
+    </g>
+
+    <!-- Cluster Cards Side Panel -->
+    <g transform="translate(560, 80)">
+      <rect width="290" height="125" rx="10" fill="#181818" stroke="#FFB22C" stroke-width="1" />
+      <text x="18" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#FFB22C">Cluster 0: High-Value Wealth</text>
+      <text x="18" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#bbb">High balances, investment interest</text>
+      <text x="18" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#888">Recommended: Premium Wealth Mgmt</text>
+      <text x="18" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#27c93f">● 22% of active portfolio</text>
+
+      <rect y="140" width="290" height="125" rx="10" fill="#181818" stroke="#854836" stroke-width="1" />
+      <text x="18" y="170" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#854836">Cluster 1: High Velocity Spenders</text>
+      <text x="18" y="192" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#bbb">Frequent transactions, active e-com</text>
+      <text x="18" y="214" font-family="'JetBrains Mono', monospace" font-size="11" fill="#888">Recommended: Cashback Platinum Card</text>
+      <text x="18" y="236" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#FFB22C">● 34% of active portfolio</text>
+
+      <rect y="280" width="290" height="125" rx="10" fill="#181818" stroke="#262626" />
+      <text x="18" y="310" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#20b2aa">Cluster 2: Consistent Retail</text>
+      <text x="18" y="332" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#bbb">Regular payroll deposits, steady utility</text>
+      <text x="18" y="354" font-family="'JetBrains Mono', monospace" font-size="11" fill="#888">Recommended: Automated Savings Goal</text>
+      <text x="18" y="376" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888">● 29% of active portfolio</text>
+
+      <rect y="420" width="290" height="125" rx="10" fill="#181818" stroke="#262626" />
+      <text x="18" y="450" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#9370db">Cluster 3: Dormant / Basic</text>
+      <text x="18" y="472" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#bbb">Low engagement, sporadic usage</text>
+      <text x="18" y="494" font-family="'JetBrains Mono', monospace" font-size="11" fill="#888">Recommended: Mobile App Onboarding</text>
+      <text x="18" y="516" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888">● 15% of active portfolio</text>
+    </g>
+  </g>
+</svg>
+

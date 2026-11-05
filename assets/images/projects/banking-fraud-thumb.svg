@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgThumb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    <linearGradient id="glowThumb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB22C" />
+      <stop offset="100%" stop-color="#854836" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgThumb)" />
+  <rect width="800" height="500" fill="none" stroke="#222" stroke-width="2" />
+
+  <!-- Grid lines -->
+  <g opacity="0.15" stroke="#FFB22C" stroke-width="0.7">
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    <line x1="200" y1="0" x2="200" y2="500" />
+    <line x1="400" y1="0" x2="400" y2="500" />
+    <line x1="600" y1="0" x2="600" y2="500" />
+  </g>
+
+  <!-- Central Card Graphics -->
+  <g transform="translate(60, 60)">
+    <!-- Streamlit Card Simulation -->
+    <rect width="680" height="380" rx="14" fill="#111" stroke="#333" stroke-width="1.5" />
+    
+    <!-- Title bar -->
+    <rect width="680" height="42" rx="14" fill="#181818" />
+    <circle cx="24" cy="21" r="5" fill="#ff5f56" />
+    <circle cx="40" cy="21" r="5" fill="#ffbd2e" />
+    <circle cx="56" cy="21" r="5" fill="#27c93f" />
+    <text x="80" y="26" font-family="'JetBrains Mono', monospace" font-size="11" fill="#888">Banking Fraud Detection MVP</text>
+    <rect x="520" y="8" width="140" height="26" rx="6" fill="#FFB22C" fill-opacity="0.2" stroke="#FFB22C" stroke-width="0.8" />
+    <text x="590" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#FFB22C" text-anchor="middle">STREAMLIT DEMO</text>
+
+    <!-- Content Preview -->
+    <rect x="30" y="66" width="180" height="85" rx="8" fill="#181818" stroke="#252525" />
+    <text x="46" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#777">MODEL EVALUATION</text>
+    <text x="46" y="122" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700" fill="#FFB22C">89.4% ROC</text>
+
+    <rect x="230" y="66" width="180" height="85" rx="8" fill="#181818" stroke="#252525" />
+    <text x="246" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#777">RISK ENGINE</text>
+    <text x="246" y="122" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700" fill="#27c93f">Low/Med/High</text>
+
+    <rect x="430" y="66" width="220" height="85" rx="8" fill="#181818" stroke="#252525" />
+    <text x="446" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#777">UNSUPERVISED CLUSTERING</text>
+    <text x="446" y="122" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700" fill="#854836">K-Means (K=4)</text>
+
+    <!-- Simulated Chart Line & Bars -->
+    <g transform="translate(30, 175)">
+      <rect width="620" height="175" rx="8" fill="#141414" />
+      <path d="M 20 130 C 80 110 140 140 200 70 C 260 20 320 90 380 40 C 440 10 500 80 580 30" fill="none" stroke="url(#glowThumb)" stroke-width="3" />
+      <circle cx="200" cy="70" r="4" fill="#FFB22C" />
+      <circle cx="380" cy="40" r="4" fill="#FFB22C" />
+      <circle cx="580" cy="30" r="4" fill="#FFB22C" />
+      
+      <!-- Mini bar charts -->
+      <rect x="40" y="90" width="16" height="50" rx="3" fill="#333" />
+      <rect x="80" y="70" width="16" height="70" rx="3" fill="#333" />
+      <rect x="120" y="50" width="16" height="90" rx="3" fill="#FFB22C" opacity="0.6" />
+      <rect x="160" y="30" width="16" height="110" rx="3" fill="#FFB22C" />
+      <text x="40" y="160" font-family="'JetBrains Mono', monospace" font-size="10" fill="#666">Feature Correlation Matrix &amp; Prediction Pipeline</text>
+    </g>
+  </g>
+</svg>
+

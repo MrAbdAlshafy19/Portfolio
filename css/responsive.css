@@ -1,0 +1,338 @@
+/* ====================================================================
+   YAHYA ABDALSHAFY PORTFOLIO - RESPONSIVE STYLESHEET
+   Mobile-First & Breakpoint Refinements
+   ==================================================================== */
+
+/* --- TABLETS & MEDIUM SCREENS (<= 1024px) --- */
+@media (max-width: 1024px) {
+  :root {
+    --nav-height: 72px;
+  }
+
+  .section {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 40px);
+    padding-bottom: 70px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .hero-badge-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-title-rotator {
+    justify-content: center;
+  }
+
+  .hero-intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-highlights {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-visual-wrapper {
+    order: -1;
+  }
+
+  .hero-image-wrapper {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .floating-badge-top {
+    left: -10px;
+    top: 8%;
+  }
+
+  .floating-badge-bottom {
+    right: -10px;
+    bottom: 6%;
+  }
+
+  /* About Grid */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Navigation */
+  .nav-menu,
+  .nav-cta {
+    display: none !important;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  /* Skills Grid */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Projects Layout */
+  .project-card-grid,
+  .project-card-reverse .project-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-reverse .project-media-col {
+    order: 1;
+    border-left: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .project-card-reverse .project-info-col {
+    order: 2;
+  }
+
+  .project-media-col {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 28px;
+  }
+
+  .project-info-col {
+    padding: 32px 28px;
+  }
+
+  /* Services Grid */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-grid > .service-card:nth-child(5) {
+    grid-column: span 2;
+  }
+
+  /* Certifications Grid */
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .certifications-grid > .cert-card:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  /* Contact Grid */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Footer Grid */
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .footer-bio {
+    grid-column: span 2;
+  }
+}
+
+/* --- SMALL TABLETS & LARGE PHONES (<= 768px) --- */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .section-title {
+    font-size: 1.95rem;
+  }
+
+  .hero-name {
+    font-size: 2.8rem;
+  }
+
+  .hero-title-rotator {
+    font-size: 1.35rem;
+    min-height: 2rem;
+  }
+
+  .hero-highlights {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .highlight-item {
+    background: var(--bg-card);
+    padding: 12px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-subtle);
+  }
+
+  .academic-card {
+    padding: 28px 20px;
+  }
+
+  .academic-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .exp-topics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid > .service-card:nth-child(5) {
+    grid-column: span 1;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certifications-grid > .cert-card:nth-child(3) {
+    grid-column: span 1;
+  }
+
+  .contact-form-card {
+    padding: 28px 20px;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bio {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  /* Modals */
+  .modal-window {
+    max-height: 94vh;
+  }
+
+  .modal-header {
+    padding: 18px 20px;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  /* Disable custom desktop cursor on touch screens */
+  .custom-cursor,
+  .cursor-follower {
+    display: none !important;
+  }
+}
+
+/* --- SMALL MOBILE DEVICES (<= 480px) --- */
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 2.25rem;
+  }
+
+  .hero-title-rotator {
+    font-size: 1.15rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-image-wrapper {
+    max-width: 290px;
+  }
+
+  .floating-badge {
+    padding: 6px 10px;
+    font-size: 0.725rem;
+  }
+
+  .floating-badge-top {
+    left: -4px;
+    top: 4%;
+  }
+
+  .floating-badge-bottom {
+    right: -4px;
+    bottom: 4%;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-actions .btn {
+    width: 100%;
+  }
+
+  .feedback-box {
+    padding: 36px 20px;
+  }
+
+  .feedback-statement {
+    font-size: 1.4rem;
+  }
+
+  .toast-container {
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+  }
+}
+
+/* --- TOUCH ACCESSIBILITY & HOVER RULES --- */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor,
+  .cursor-follower {
+    display: none !important;
+  }
+
+  .interactive-card:active {
+    transform: scale(0.99);
+  }
+}

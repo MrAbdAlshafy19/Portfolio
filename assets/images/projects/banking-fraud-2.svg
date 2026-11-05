@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgG2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d0d" />
+      <stop offset="100%" stop-color="#141414" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bgG2)" />
+  
+  <!-- Header Bar -->
+  <rect width="1200" height="56" fill="#141414" stroke="#222" stroke-width="1" />
+  <circle cx="28" cy="28" r="6" fill="#ff5f56" />
+  <circle cx="48" cy="28" r="6" fill="#ffbd2e" />
+  <circle cx="68" cy="28" r="6" fill="#27c93f" />
+  <rect x="110" y="16" width="460" height="24" rx="12" fill="#1f1f1f" />
+  <text x="130" y="32" font-family="'JetBrains Mono', monospace" font-size="12" fill="#888">https://bankingfrauddetectionmvpdemo.streamlit.app/#customer-risk</text>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="56" width="280" height="694" fill="#111" stroke="#222" stroke-width="1" />
+  <text x="24" y="98" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#F7F7F7">Banking AI Platform</text>
+  <text x="24" y="118" font-family="'JetBrains Mono', monospace" font-size="11" fill="#FFB22C">Risk &amp; Evaluation Engine</text>
+
+  <rect x="16" y="140" width="248" height="42" rx="8" fill="#181818" />
+  <text x="36" y="166" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#A0A0A0">○ 1. Fraud Detection</text>
+  
+  <rect x="16" y="192" width="248" height="42" rx="8" fill="#1f1a14" stroke="#FFB22C" stroke-width="1" />
+  <text x="36" y="218" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#FFB22C">● 2. Customer Risk Score</text>
+
+  <rect x="16" y="244" width="248" height="42" rx="8" fill="#181818" />
+  <text x="36" y="270" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#A0A0A0">○ 3. K-Means Segmentation</text>
+
+  <rect x="16" y="296" width="248" height="42" rx="8" fill="#181818" />
+  <text x="36" y="322" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#A0A0A0">○ 4. Product Recommender</text>
+
+  <!-- Main Content -->
+  <g transform="translate(310, 80)">
+    <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="800" fill="#F7F7F7">Customer Risk Assessment &amp; Tier Classification</text>
+    <text x="0" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#A0A0A0">Multi-class supervised classification with Low, Medium, and High default and risk scoring.</text>
+
+    <!-- Metrics Cards -->
+    <rect x="0" y="70" width="260" height="96" rx="10" fill="#181818" stroke="#2a2a2a" />
+    <text x="20" y="98" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#888">LOW RISK SEGMENT</text>
+    <text x="20" y="130" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="700" fill="#27c93f">64.2%</text>
+    <text x="20" y="152" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888">Prime accounts</text>
+
+    <rect x="280" y="70" width="260" height="96" rx="10" fill="#181818" stroke="#2a2a2a" />
+    <text x="300" y="98" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#888">MEDIUM RISK SEGMENT</text>
+    <text x="300" y="130" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="700" fill="#FFB22C">26.5%</text>
+    <text x="300" y="152" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888">Monitoring threshold</text>
+
+    <rect x="560" y="70" width="290" height="96" rx="10" fill="#181818" stroke="#2a2a2a" />
+    <text x="580" y="98" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#888">HIGH RISK TIER</text>
+    <text x="580" y="130" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="700" fill="#ff5f56">9.3%</text>
+    <text x="580" y="152" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#ff5f56">Credit hold recommendation</text>
+
+    <!-- Confusion Matrix Graphic -->
+    <rect x="0" y="190" width="410" height="440" rx="12" fill="#141414" stroke="#262626" />
+    <text x="24" y="224" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#F7F7F7">Confusion Matrix (Normalized)</text>
+    <text x="24" y="246" font-family="'JetBrains Mono', monospace" font-size="11" fill="#888">Random Forest Cross-Validation</text>
+    
+    <!-- Matrix Heatmap -->
+    <g transform="translate(60, 280)">
+      <!-- Row 0: Actual Low -->
+      <rect x="60" y="20" width="80" height="60" fill="#FFB22C" rx="4" />
+      <text x="100" y="56" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#111" text-anchor="middle">0.93</text>
+      
+      <rect x="150" y="20" width="80" height="60" fill="#FFB22C" fill-opacity="0.2" rx="4" />
+      <text x="190" y="56" font-family="'JetBrains Mono', monospace" font-size="14" fill="#F7F7F7" text-anchor="middle">0.05</text>
+      
+      <rect x="240" y="20" width="80" height="60" fill="#FFB22C" fill-opacity="0.08" rx="4" />
+      <text x="280" y="56" font-family="'JetBrains Mono', monospace" font-size="14" fill="#F7F7F7" text-anchor="middle">0.02</text>
+
+      <!-- Row 1: Actual Med -->
+      <rect x="60" y="90" width="80" height="60" fill="#FFB22C" fill-opacity="0.25" rx="4" />
+      <text x="100" y="126" font-family="'JetBrains Mono', monospace" font-size="14" fill="#F7F7F7" text-anchor="middle">0.08</text>
+
+      <rect x="150" y="90" width="80" height="60" fill="#FFB22C" fill-opacity="0.85" rx="4" />
+      <text x="190" y="126" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#111" text-anchor="middle">0.86</text>
+
+      <rect x="240" y="90" width="80" height="60" fill="#FFB22C" fill-opacity="0.15" rx="4" />
+      <text x="280" y="126" font-family="'JetBrains Mono', monospace" font-size="14" fill="#F7F7F7" text-anchor="middle">0.06</text>
+
+      <!-- Row 2: Actual High -->
+      <rect x="60" y="160" width="80" height="60" fill="#FFB22C" fill-opacity="0.08" rx="4" />
+      <text x="100" y="196" font-family="'JetBrains Mono', monospace" font-size="14" fill="#F7F7F7" text-anchor="middle">0.03</text>
+
+      <rect x="150" y="160" width="80" height="60" fill="#FFB22C" fill-opacity="0.18" rx="4" />
+      <text x="190" y="196" font-family="'JetBrains Mono', monospace" font-size="14" fill="#F7F7F7" text-anchor="middle">0.09</text>
+
+      <rect x="240" y="160" width="80" height="60" fill="#FFB22C" fill-opacity="0.9" rx="4" />
+      <text x="280" y="196" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#111" text-anchor="middle">0.88</text>
+
+      <!-- Labels -->
+      <text x="100" y="10" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888" text-anchor="middle">Pred Low</text>
+      <text x="190" y="10" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888" text-anchor="middle">Pred Med</text>
+      <text x="280" y="10" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888" text-anchor="middle">Pred High</text>
+
+      <text x="45" y="56" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888" text-anchor="end">Low</text>
+      <text x="45" y="126" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888" text-anchor="end">Med</text>
+      <text x="45" y="196" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#888" text-anchor="end">High</text>
+    </g>
+
+    <!-- Model Comparison Table -->
+    <rect x="430" y="190" width="420" height="440" rx="12" fill="#141414" stroke="#262626" />
+    <text x="454" y="224" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#F7F7F7">Model Comparison Benchmarks</text>
+    
+    <!-- Table Header -->
+    <rect x="454" y="250" width="372" height="34" rx="6" fill="#1c1c1c" />
+    <text x="468" y="272" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#888">ALGORITHM</text>
+    <text x="590" y="272" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#888">ACCURACY</text>
+    <text x="690" y="272" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#888">F1-SCORE</text>
+    <text x="770" y="272" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#888">ROC-AUC</text>
+
+    <!-- Row 1: RF -->
+    <rect x="454" y="294" width="372" height="44" rx="6" fill="#221c14" stroke="#FFB22C" stroke-width="0.8" />
+    <text x="468" y="321" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#FFB22C">Random Forest</text>
+    <text x="590" y="321" font-family="'JetBrains Mono', monospace" font-size="12" fill="#F7F7F7">89.4%</text>
+    <text x="690" y="321" font-family="'JetBrains Mono', monospace" font-size="12" fill="#F7F7F7">0.887</text>
+    <text x="770" y="321" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#27c93f">0.934</text>
+
+    <!-- Row 2: XGBoost -->
+    <rect x="454" y="348" width="372" height="44" rx="6" fill="#181818" />
+    <text x="468" y="375" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#e0e0e0">XGBoost</text>
+    <text x="590" y="375" font-family="'JetBrains Mono', monospace" font-size="12" fill="#F7F7F7">88.8%</text>
+    <text x="690" y="375" font-family="'JetBrains Mono', monospace" font-size="12" fill="#F7F7F7">0.881</text>
+    <text x="770" y="375" font-family="'JetBrains Mono', monospace" font-size="12" fill="#27c93f">0.928</text>
+
+    <!-- Row 3: Logistic Regression -->
+    <rect x="454" y="402" width="372" height="44" rx="6" fill="#181818" />
+    <text x="468" y="429" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#bbb">Logistic Reg.</text>
+    <text x="590" y="429" font-family="'JetBrains Mono', monospace" font-size="12" fill="#bbb">81.2%</text>
+    <text x="690" y="429" font-family="'JetBrains Mono', monospace" font-size="12" fill="#bbb">0.795</text>
+    <text x="770" y="429" font-family="'JetBrains Mono', monospace" font-size="12" fill="#bbb">0.852</text>
+
+    <!-- Summary note -->
+    <rect x="454" y="468" width="372" height="90" rx="8" fill="#181818" stroke="#333" />
+    <text x="472" y="496" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#FFB22C">Hyperparameter Optimization Note</text>
+    <text x="472" y="520" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#A0A0A0">Cross-validation (5-Fold) confirmed Random Forest</text>
+    <text x="472" y="538" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#A0A0A0">minimized false negatives for high-risk credit accounts.</text>
+  </g>
+</svg>
+

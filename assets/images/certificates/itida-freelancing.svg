@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" width="100%" height="100%">
+  <defs>
+    <linearGradient id="certBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    <linearGradient id="certBorder2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB22C" />
+      <stop offset="50%" stop-color="#854836" />
+      <stop offset="100%" stop-color="#FFB22C" />
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="640" fill="url(#certBg2)" rx="8" />
+  <rect x="20" y="20" width="860" height="600" fill="none" stroke="url(#certBorder2)" stroke-width="2" rx="6" />
+  <rect x="28" y="28" width="844" height="584" fill="none" stroke="#262626" stroke-width="1" rx="4" />
+
+  <!-- Corner Ornaments -->
+  <path d="M 36 60 L 36 36 L 60 36" fill="none" stroke="#FFB22C" stroke-width="3" />
+  <path d="M 864 60 L 864 36 L 840 36" fill="none" stroke="#FFB22C" stroke-width="3" />
+  <path d="M 36 580 L 36 604 L 60 604" fill="none" stroke="#FFB22C" stroke-width="3" />
+  <path d="M 864 580 L 864 604 L 840 604" fill="none" stroke="#FFB22C" stroke-width="3" />
+
+  <g transform="translate(450, 95)" text-anchor="middle">
+    <!-- Badge -->
+    <circle cx="0" cy="15" r="34" fill="#1b1712" stroke="#FFB22C" stroke-width="2" />
+    <text x="0" y="24" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800" fill="#FFB22C">ITIDA</text>
+
+    <text x="0" y="90" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="#A0A0A0">PROFESSIONAL DEVELOPMENT TRAINING</text>
+    <text x="0" y="145" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="800" fill="#F7F7F7">Freelancing Training</text>
+    <text x="0" y="175" font-family="'JetBrains Mono', monospace" font-size="14" fill="#FFB22C">Digital Service Delivery &amp; Client Communication</text>
+
+    <line x1="-120" y1="205" x2="120" y2="205" stroke="#333" stroke-width="1" />
+
+    <text x="0" y="240" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" fill="#888">Awarded to</text>
+    <text x="0" y="280" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" fill="#FFB22C">Yahya Abdalshafy</text>
+
+    <text x="0" y="325" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#A0A0A0">
+      Completion of professional training covering market needs identification,
+    </text>
+    <text x="0" y="350" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#A0A0A0">
+      technical deliverable scoping, client communication, and digital services positioning.
+    </text>
+  </g>
+
+  <!-- Footer Info -->
+  <g transform="translate(100, 520)">
+    <line x1="0" y1="0" x2="260" y2="0" stroke="#333" stroke-width="1" />
+    <text x="130" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#777" text-anchor="middle">Issuing Agency</text>
+    <text x="130" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#F7F7F7" text-anchor="middle">iTida (IT Industry Development Agency)</text>
+  </g>
+
+  <g transform="translate(540, 520)">
+    <line x1="0" y1="0" x2="260" y2="0" stroke="#333" stroke-width="1" />
+    <text x="130" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#777" text-anchor="middle">Program Status</text>
+    <text x="130" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#27c93f" text-anchor="middle">Verified Completion</text>
+  </g>
+</svg>
+

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121212" />
+      <stop offset="50%" stop-color="#0a0a0a" />
+      <stop offset="100%" stop-color="#1a120c" />
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB22C" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#854836" stop-opacity="0.6" />
+    </linearGradient>
+    <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB22C" />
+      <stop offset="100%" stop-color="#854836" />
+    </linearGradient>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#222222" stroke-width="0.8" />
+      <circle cx="40" cy="40" r="1.5" fill="#FFB22C" fill-opacity="0.3" />
+    </pattern>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="24" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="900" fill="url(#bgGrad)" />
+  <rect width="800" height="900" fill="url(#gridPattern)" />
+
+  <!-- Ambient Glowing Orbs -->
+  <circle cx="400" cy="380" r="260" fill="#FFB22C" fill-opacity="0.08" filter="url(#softGlow)" />
+  <circle cx="650" cy="200" r="180" fill="#854836" fill-opacity="0.12" filter="url(#softGlow)" />
+
+  <!-- Geometric Sci/ML Ring -->
+  <circle cx="400" cy="420" r="240" fill="none" stroke="url(#accentGlow)" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
+  <circle cx="400" cy="420" r="280" fill="none" stroke="#333333" stroke-width="1.2" stroke-dasharray="3 9" opacity="0.8" />
+
+  <!-- Stylized Silhouette / Monogram Portrait -->
+  <g transform="translate(400, 420)">
+    <!-- Base Glow Disc -->
+    <circle cx="0" cy="0" r="180" fill="#141414" stroke="url(#accentGlow)" stroke-width="3" />
+    
+    <!-- Abstract Stylized Portrait Silhouette -->
+    <!-- Head -->
+    <ellipse cx="0" cy="-45" rx="65" ry="78" fill="#1e1e1e" stroke="#2a2a2a" stroke-width="2" />
+    <!-- Hair Accent -->
+    <path d="M -60 -55 Q -10 -125 55 -60 Q 30 -115 -45 -100 Z" fill="#FFB22C" fill-opacity="0.25" />
+    <!-- Shoulders -->
+    <path d="M -135 150 C -125 60 -75 25 0 25 C 75 25 125 60 135 150 Z" fill="#1e1e1e" stroke="#2c2c2c" stroke-width="2" />
+    <!-- Collar & Tie/Suit -->
+    <path d="M -40 35 L 0 110 L 40 35" fill="none" stroke="url(#accentGlow)" stroke-width="2.5" />
+    <path d="M -15 110 L 0 150 L 15 110 Z" fill="#854836" opacity="0.8" />
+
+    <!-- Monogram Overlay YA -->
+    <text x="0" y="5" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-size="28" font-weight="800" fill="#FFB22C" text-anchor="middle" letter-spacing="4" opacity="0.95">YAHYA</text>
+  </g>
+
+  <!-- Floating Technical Chips -->
+  <!-- Chip 1: ML Engineer -->
+  <g transform="translate(100, 240)">
+    <rect width="180" height="44" rx="22" fill="#161616" stroke="#FFB22C" stroke-width="1.2" />
+    <circle cx="24" cy="22" r="7" fill="#FFB22C" />
+    <text x="44" y="27" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#F7F7F7">ML Engineer</text>
+  </g>
+
+  <!-- Chip 2: Python & Data -->
+  <g transform="translate(540, 270)">
+    <rect width="180" height="44" rx="22" fill="#161616" stroke="#854836" stroke-width="1.2" />
+    <circle cx="24" cy="22" r="7" fill="#854836" />
+    <text x="44" y="27" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#F7F7F7">Python &amp; FinTech</text>
+  </g>
+
+  <!-- Chip 3: Predictive Models -->
+  <g transform="translate(120, 620)">
+    <rect width="200" height="44" rx="22" fill="#161616" stroke="rgba(255, 178, 44, 0.4)" stroke-width="1.2" />
+    <circle cx="24" cy="22" r="7" fill="#FFB22C" fill-opacity="0.7" />
+    <text x="44" y="27" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#F7F7F7">Predictive AI</text>
+  </g>
+
+  <!-- Instruction Badge for User Image Replacement -->
+  <g transform="translate(150, 780)">
+    <rect width="500" height="54" rx="12" fill="#111111" stroke="#333333" stroke-width="1" stroke-dasharray="6 4" />
+    <text x="250" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#A0A0A0" text-anchor="middle">
+      Upload <tspan fill="#FFB22C" font-weight="700">yahya-portrait.jpg</tspan> into <tspan fill="#F7F7F7">assets/images/profile/</tspan>
+    </text>
+  </g>
+</svg>
+
